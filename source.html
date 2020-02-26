@@ -4,16 +4,25 @@
   <title>Playlist server project</title>
   <!-- Link CSS here -->
   <link type='text/css' rel='stylesheet' href='/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Krona+One|Oswald&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <h1>Playlist</h1>
-<h4>Songs</h4>
-    <div class="lists"> 
-        <ul class="playList">  </ul>
+    <div id="listContent">
+        <div class="list"> 
+        </div>
     </div>
-    <label for="addOn">Add to the Playlist</label>
-    <input id="addOn">
+    <div class="inputs">
+        <label for="addOn">Add to the Playlist</label>
+        <input id="addOn">
+        <button class="clear">Clear List</button>
+    </div>
+    <div id="areYouSure">
+        <p>Are you sure you want to Delete you playlist? <br> (You will not be able to recover it)</p>
+        <button id="finalClear">Yes</button>
+        <button>No</button>
+    </div>
 
 
                             <!-- Dont type past here -->

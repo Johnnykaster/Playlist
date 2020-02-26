@@ -7,9 +7,9 @@ if (playList === null) {
 console.log(playList)
 
 function displayList() {
-    $(".playList").html("");
+    $(".list").html("");
   playList.forEach(item => {
-      $(".playList").append("<li>" + item + "</li>")
+      $(".list").append("<p>" + item + "</p>")
       console.log(item);
 })
 };
@@ -24,5 +24,17 @@ input.addEventListener("keyup", function(event) {
     displayList();
     localStorage.setItem("playArray", JSON.stringify(playList))
     console.log(playList)
+    document.getElementById('addOn').value = '';
   }
+});
+
+$(".clear").click(function(){
+    $("#areYouSure").show();
+});
+
+$("#finalClear").click(function() {
+    localStorage.clear("playArray");
+    playList = [];
+    displayList();
+    $("#areYouSure").hide();
 });
